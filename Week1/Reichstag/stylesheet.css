@@ -1,0 +1,11 @@
+header {
+    padding: 20px;
+    border: 1px gray dashed;
+}
+
+.logo {
+}
+
+.hamburgermenu{
+    float: right;
+}
