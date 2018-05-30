@@ -1,14 +1,17 @@
 * {
     box-sizing:border-box;
 }
-/*
-body {
+
+/* body {
     margin: 0;
 } */
 
 header {
     padding: 20px;
+}
 
+footer {
+    background: Gray;
 }
 
 .logo {
@@ -16,4 +19,24 @@ header {
 
 .hamburgermenu{
     float: right;
+}
+/* .main {
+    background-image: url(Assets/reichstag.jpg);
+} */
+.main-image {
+    width: 100%;
+}
+
+.reasons {
+    background: LightGray;
+    /* what is the difference between background and background-color */
+}
+
+.feature {
+    width: 30%;
+    display: inline;
+}
+
+.icon {
+    width: 50px;
 }
