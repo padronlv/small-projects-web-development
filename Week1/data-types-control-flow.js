@@ -35,6 +35,7 @@ function logType(arg) {
         console.log("I have no idea!");
     }
 }
+logType(3);
 
 // Copy the following object into your code:
 // var a = {
