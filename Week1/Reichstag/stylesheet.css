@@ -2,41 +2,134 @@
     box-sizing:border-box;
 }
 
-/* body {
+body {
     margin: 0;
-} */
+}
 
 header {
-    padding: 20px;
+    padding: 12px 40px;
 }
 
 footer {
     background: Gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1  {
+    font-size: 40px;
+    color: white;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 5px;
+    color: orange;
+}
+
+h4, p {
+    margin: 5px;
 }
 
 .logo {
+    width: 120px;
 }
 
 .hamburgermenu{
+    width: 35px;
     float: right;
 }
-/* .main {
-    background-image: url(Assets/reichstag.jpg);
-} */
+
+.main {
+    margin-top:-4px;
+    position: relative;
+}
+
 .main-image {
     width: 100%;
+    filter: brightness(0.7);
 }
+
+.main-text {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 42%;
+    text-align: center;
+    width: 100%;
+
+}
+.title {
+    margin-left:60px;
+    margin-right: 60px;
+}
+
 
 .reasons {
     background: LightGray;
-    /* what is the difference between background and background-color */
+    margin-top: -4px;
+    /* padding: 30px; */
+    width: 100%;
+    /* border: 1px solid red; */
+    text-align: center;
 }
-
 .feature {
-    width: 30%;
-    display: inline;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid red; */
+    width: 36%;
+    display: inline-block;
 }
 
 .icon {
+    vertical-align: top;
+    /* border: 1px solid red; */
     width: 50px;
+    display:inline-block;
+
+}
+.text {
+    font-size: 16px;
+    vertical-align: top;
+    /* border: 1px solid red; */
+    width:calc(100% - 54px);
+    display:inline-block;
+    text-align: left;
+
+}
+.buttonStart {
+    background-color: yellow;
+    border: 5px solid orange;
+    border-radius: 60px;
+    width: 280px;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 719px) {
+  .feature {
+      /*  Why if I put display: block, margin doesn't work properly?*/
+      margin: 30px auto;
+      /* margin auto without margin horizontal?*/
+      width: 70%;
+  }
+  .main-text {
+      top: 20%;
+  }
+  h1  {
+      font-size: 21px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  .buttonStart {
+      background-color: yellow;
+      border: 5px solid orange;
+      border-radius: 60px;
+      width: 120px;
+      margin: 0px auto;
+  }
 }
