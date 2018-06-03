@@ -1,0 +1,22 @@
+
+
+#head {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border: 3px red solid;
+    border-radius: 75px;
+    transform:translate(-200px)
+}
+
+.arm {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 300px;
+    background: tomato;
+    transform-origin: left;
+    transform: rotate(45deg)
+}

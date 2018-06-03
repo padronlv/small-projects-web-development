@@ -54,9 +54,10 @@ h4, p {
 .main-text {
     /* border: 1px solid red; */
     position: absolute;
-    top: 42%;
+    top: 50%;
     text-align: center;
     width: 100%;
+    transform: translateY(-50%);
 
 }
 .title {
@@ -109,13 +110,14 @@ h4, p {
 
 @media screen and (max-width: 719px) {
   .feature {
+      /* display: block; */
       /*  Why if I put display: block, margin doesn't work properly?*/
-      margin: 30px auto;
+      /* margin: 30px auto; */
+      margin-left: auto;
+      margin-right: auto;
+
       /* margin auto without margin horizontal?*/
       width: 70%;
-  }
-  .main-text {
-      top: 20%;
   }
   h1  {
       font-size: 21px;
