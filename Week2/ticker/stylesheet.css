@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+}
+.my-headlines {
+    white-space: nowrap;
+}
+.wrapper {
+    position:relative;
+    border:5px solid red;
+    height: 25px;
+}
+
+.my-headlines {
+    position: absolute;
+    left: 100%;
+}
+
+.my-headlines a {
+    padding-right: 30px;
+}
+/*  not working*/

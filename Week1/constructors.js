@@ -62,12 +62,18 @@ console.log(a);
 function Countdown (seconds) {
     this.time = seconds;
     this.count = function () {
-        for (var i = this.time; i >= 0; i--) {
-            setTimeout(function() {
-                console.log(i);
-            }, 1000);
-            // console.log(i);
-        }
+        // for (var i = this.time; i >= 0; i--) {
+        //     setTimeout(function() {
+        //         console.log(i);
+        //     }, 1000);
+        //     // console.log(i);
+        setTimeout(function(){
+            console.log(this.time);
+            this.time--;
+            if (n = 3) {
+                a = setTimeout()
+            }
+        }, 1000);
     };
 }
 
