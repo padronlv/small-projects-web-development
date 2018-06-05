@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+}

@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+}
+
+.first {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+.second {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
