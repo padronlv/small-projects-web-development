@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    width: 830px;
+    justify-content: space-between;
+}
+
+
+.big{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    /* flex-direction: column; */
+}
+
+.small {
+    width: 100px;
+    height: 100px;
+}
+
+.gray {
+    background-color: gray;
+    justify-content: flex-end;
+}
+
+.black {
+    background-color: black;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.blue {
+    background-color: blue;
+    align-items: flex-end;
+}
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.pink {
+    background-color: pink;
+}

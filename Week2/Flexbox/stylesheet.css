@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+
+.flex-container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.box {
+    display: flex;
+}
+
+.header {
+    background-color: orange;
+    height: 70px;
+
+}
+
+.main {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.footer {
+    background-color: pink;
+    height:30px;
+
+}
