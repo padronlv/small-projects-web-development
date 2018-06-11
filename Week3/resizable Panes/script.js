@@ -11,9 +11,10 @@
     });
 
     $(".panes").on("mousemove", function(e) {
+        e.preventDefault();
         if(barClick){
-            console.log("moving");
-            finishX = e.offsetX;
+            console.log("moving" + e.offsetX);
+            finishX = e.offsetX + e.target.offsetLeft;
             bar.css({
                 left: finishX + "px"
             });
@@ -24,9 +25,10 @@
     });
 
     $(".panes").on("mouseup", function(e) {
+        e.preventDefault();
         if(barClick){
-
-            finishX = e.offsetX;
+            console.log("finish" + e.offsetX);
+            finishX = e.offsetX + e.target.offsetLeft;
             bar.css({
                 left: finishX + "px"
             });
