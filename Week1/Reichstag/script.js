@@ -1,4 +1,5 @@
 (function () {
+    var popupActive = false;
     var hm = document.getElementsByClassName("hamburgermenu")[0];
     var hmlayer = document.getElementById("hamburger-menu");
     var hmpop = document.getElementsByClassName("menu")[0];
@@ -22,12 +23,26 @@
 
 
     hmlayer.addEventListener("click", function () {
-        hmlayer.style.transform = "translateY(-100%)";
-        hmpop.style.transform = "translateX(100%)";
-        // hmpop.classList.remove("animation");
+        if(popupActive == false){
+            hmlayer.style.transform = "translateY(-100%)";
+            hmpop.style.transform = "translateX(100%)";
+            // hmpop.classList.remove("animation");
+        }
     });
 
+    setTimeout(function () {
+        $(".popup-overlay").addClass("active");
+        $("#hamburger-menu").css({
+            transform: "translateY(0%)"
+        });
+        popupActive = true;
+    }, 1000);
 
-
-
+    $(".popup-closer").on("click", function () {
+        $(".popup-overlay").removeClass("active");
+        $("#hamburger-menu").css({
+            transform: "translateY(-100%)"
+        });
+        popupActive = false;
+    });
 })();

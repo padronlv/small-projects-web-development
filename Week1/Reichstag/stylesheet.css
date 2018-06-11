@@ -151,6 +151,10 @@ ul {
     margin: 30px;
     color: black;
 }
+.popup-closer {
+    text-align: right;
+    color: black;
+}
 
 .logout {
     margin-left: 65px;
@@ -158,11 +162,35 @@ ul {
 
 }
 
-/* .animation {
-    transform: translateX(0%);
-} */
 
+.popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+    visibility:hidden;
+    position:absolute;
+    background:#ffffff;
+    border:3px solid #666666;
+    border-radius: 25px;
+    width:500px;
+    height:200px;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.popup-text{
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.popup-title {
+    margin-bottom: 20px;
+}
+
+.active{
+  /*displays pop-up when "active" class is present*/
+    visibility:visible;
+}
 
 
 
