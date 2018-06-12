@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+/* body {
+    margin: 0px;
+} */
+
+
+#results {
+    width:300px;
+}
+
+.result {
+    text-size: 36px;
+}
+
+.highlight {
+    background-color: lightGray;
+    color: blue;
+}
