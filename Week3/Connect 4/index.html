@@ -6,50 +6,71 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
-        <div class
         <div class="board">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div class="column" id="column0">
+                <div class="circle row0 diagonalDown3"></div>
+                <div class="circle row1 diagonalDown2"></div>
+                <div class="circle row2 diagonalDown1"></div>
+                <div class="circle row3 diagonalUp1"></div>
+                <div class="circle row4 diagonalUp2"></div>
+                <div class="circle row5 diagonalUp3"></div>
+            </div>
+            <div class="column" id="column1">
+                <div class="circle row0 diagonalDown4"></div>
+                <div class="circle row1 diagonalDown3"></div>
+                <div class="circle row2 diagonalUp1 diagonalDown2"></div>
+                <div class="circle row3 diagonalUp2 diagonalDown1"></div>
+                <div class="circle row4 diagonalUp3"></div>
+                <div class="circle row5 diagonalUp4"></div>
+            </div>
+            <div class="column" id="column2">
+                <div class="circle row0 diagonalDown5"></div>
+                <div class="circle row1 diagonalUp1 diagonalDown4"></div>
+                <div class="circle row2 diagonalUp2 diagonalDown3"></div>
+                <div class="circle row3 diagonalUp3 diagonalDown2"></div>
+                <div class="circle row4 diagonalUp4 diagonalDown1"></div>
+                <div class="circle row5 diagonalUp5"></div>
+            </div>
+            <div class="column" id="column3">
+                <div class="circle row0 diagonalUp1 diagonalDown6"></div>
+                <div class="circle row1 diagonalUp2 diagonalDown5"></div>
+                <div class="circle row2 diagonalUp3 diagonalDown4"></div>
+                <div class="circle row3 diagonalUp4 diagonalDown3"></div>
+                <div class="circle row4 diagonalUp5 diagonalDown2"></div>
+                <div class="circle row5 diagonalUp6 diagonalDown1"></div>
+            </div>
+            <div class="column" id="column4">
+                <div class="circle row0 diagonalUp2"></div>
+                <div class="circle row1 diagonalUp3 diagonalDown6"></div>
+                <div class="circle row2 diagonalUp4 diagonalDown5"></div>
+                <div class="circle row3 diagonalUp5 diagonalDown4"></div>
+                <div class="circle row4 diagonalUp6 diagonalDown3"></div>
+                <div class="circle row5 diagonalDown2"></div>
+            </div>
+            <div class="column" id="column5">
+                <div class="circle row0 diagonalUp3"></div>
+                <div class="circle row1 diagonalUp4"></div>
+                <div class="circle row2 diagonalUp5 diagonalDown6"></div>
+                <div class="circle row3 diagonalUp6 diagonalDown5"></div>
+                <div class="circle row4 diagonalDown4"></div>
+                <div class="circle row5 diagonalDown3"></div>
+            </div>
+            <div class="column" id="column6">
+                <div class="circle row0 diagonalUp4"></div>
+                <div class="circle row1 diagonalUp5"></div>
+                <div class="circle row2 diagonalUp6"></div>
+                <div class="circle row3 diagonalDown6"></div>
+                <div class="circle row4 diagonalDown5"></div>
+                <div class="circle row5 diagonalDown4"></div>
+            </div>
         </div>
+        <section class="popup-overlay">
+            <div class="popup-content">
+                <h4 class="popup-text popup-title">You win! Do you want to play again? Click "OK"</h4>
+                <button id="start">OK</button>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

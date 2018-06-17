@@ -8,24 +8,67 @@ body {
 
 
 .board{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    width: 80%;
-    height: 80vh;
+    position: relative;
+    left: 50%;
+    top: 50vh;
+
+    display:flex;
+    flex-grow: column;
+    width: 780px;
     padding: 10px;
+    background-color: blue;
+    transform: translate(-50%, -50%);
+    /* flex-direction: column; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
     background-color: blue;
     /* flex-direction: column; */
 }
 
 .circle {
-    width: 100%;
-    height: 100%;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
     background-color: white;
     border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 1s;
 }
 
-.gray {
-    background-color: gray;
+.player1 {
+    background-color: red;
+}
+
+.player2 {
+    background-color: yellow;
+}
+
+.popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+    visibility:hidden;
+    position:absolute;
+    background:#ffffff;
+    border:3px solid #666666;
+    border-radius: 25px;
+    width:500px;
+    height:200px;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.popup-text, #start{
+    font-size: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.active{
+  /*displays pop-up when "active" class is present*/
+    visibility:visible;
 }
