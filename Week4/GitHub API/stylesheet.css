@@ -3,5 +3,35 @@
 }
 
 body {
+    background-color: gray;
 
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+.repos {
+    margin: 30px;
+}
+
+.oneRepo {
+    display: flex;
+    margin: 30px;
+
+}
+.nameOneRepo {
+    margin: 30px;
+}
+.full_name {
+    font-size: 25px;
+}
+#resultsFor {
+    display: none;
+    margin: 30px;
+    font-size: 25px;
+    text-align:center;
+}
+li {
+    font-size: 15px;
 }
