@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Handlebars</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="authorsDiv"></div>
+
+        <script id="authorsScript" type="text/x-handlebars-template">
+
+             {{#each authorsTemplate}}
+                 <h3>{{ name }}</h3>
+                 <p>Born: {{ born }} - Died: {{ died }}</p>
+                 <p>Selected Writings: {{ selectedWritings }}</p>
+                 <p>Quote: {{ quote }}</p>
+                 <img src="{{photo}}">
+
+             {{/each}}
+
+ </script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
