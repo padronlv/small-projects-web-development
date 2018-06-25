@@ -1,0 +1,20 @@
+1529933776707	HEAD	/	{"cache-control":"no-cache","postman-token":"afc0cafa-3bac-4053-88d2-f3f416d9334d","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933776928	HEAD	/	{"cache-control":"no-cache","postman-token":"33d78d14-fbbb-4a72-a181-1343aac04954","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933777305	HEAD	/	{"cache-control":"no-cache","postman-token":"8d035d89-72b2-444f-8ea1-73672a06f186","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933777674	HEAD	/	{"cache-control":"no-cache","postman-token":"da640bea-2e4c-46cd-b76e-12145b0ce4d1","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933778079	HEAD	/	{"cache-control":"no-cache","postman-token":"24aec7b3-ee43-4181-b16c-5b6fb07714b9","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933778433	HEAD	/	{"cache-control":"no-cache","postman-token":"5c99e720-eda1-4826-862b-3610e3eb8d0b","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933778654	HEAD	/	{"cache-control":"no-cache","postman-token":"a56f8842-ebfc-4958-9098-06fc2702b5b1","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933873246	HEAD	/	{"cache-control":"no-cache","postman-token":"d8632b8d-7004-4753-a1a8-0a40ddd6b0d5","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933873461	HEAD	/	{"cache-control":"no-cache","postman-token":"d26b5c2d-eb4b-41d3-83e3-722f54914291","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933873825	HEAD	/	{"cache-control":"no-cache","postman-token":"03462378-7b0f-4a4e-beb8-dbeb6af5f77f","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933874178	HEAD	/	{"cache-control":"no-cache","postman-token":"50a4674b-8963-4f3d-a6f5-fb02a9493633","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933874426	HEAD	/	{"cache-control":"no-cache","postman-token":"1a2edfb9-0362-4f35-a02d-8a6778763723","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933874803	HEAD	/	{"cache-control":"no-cache","postman-token":"087de397-f08f-4369-a8bf-bcf10fee4c3b","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529933875012	HEAD	/	{"cache-control":"no-cache","postman-token":"6e9d2d45-e00d-41e1-b52a-d70286834ce2","user-agent":"PostmanRuntime/7.1.5","accept":"*/*","host":"localhost:8080","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}
+1529934211006	HEAD	/	"PostmanRuntime/7.1.5"
+1529934211304	HEAD	/	"PostmanRuntime/7.1.5"
+1529934211637	HEAD	/	"PostmanRuntime/7.1.5"
+1529934211821	HEAD	/	"PostmanRuntime/7.1.5"
+1529934212174	HEAD	/	"PostmanRuntime/7.1.5"
+1529934212523	HEAD	/	"PostmanRuntime/7.1.5"
