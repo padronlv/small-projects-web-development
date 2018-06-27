@@ -1,0 +1,224 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 12px 40px;
+}
+
+footer {
+    background: Gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1  {
+    font-size: 40px;
+    color: white;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 5px;
+    color: orange;
+}
+
+h3,  li {
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+li {
+    margin: 20px;
+}
+
+h4, p {
+    margin: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo {
+    width: 120px;
+}
+
+.hamburgermenu{
+    width: 35px;
+    float: right;
+}
+
+.main {
+    margin-top:-4px;
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+.main-text {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+
+}
+.title {
+    margin-left:60px;
+    margin-right: 60px;
+}
+
+
+.reasons {
+    background: LightGray;
+    margin-top: -4px;
+    /* padding: 30px; */
+    width: 100%;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.feature {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid red; */
+    width: 36%;
+    display: inline-block;
+}
+
+.icon {
+    vertical-align: top;
+    /* border: 1px solid red; */
+    width: 50px;
+    display:inline-block;
+
+}
+.text {
+    font-size: 16px;
+    vertical-align: top;
+    /* border: 1px solid red; */
+    width:calc(100% - 54px);
+    display:inline-block;
+    text-align: left;
+
+}
+.buttonStart {
+    background-color: yellow;
+    border: 5px solid orange;
+    border-radius: 60px;
+    width: 280px;
+    margin: 0px auto;
+}
+
+#hamburger-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,  0, .4);
+    transform: translateY(-100%);
+    /* display: none; */
+}
+
+.menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    max-width: 350px;
+    height: 100%;
+    background-color: white;
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transform: translateX(100%);
+}
+
+.closer {
+    text-align: right;
+    margin: 30px;
+    color: black;
+}
+.popup-closer {
+    text-align: right;
+    color: black;
+}
+
+.logout {
+    margin-left: 65px;
+    margin-top: 60px;
+
+}
+
+
+.popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+    visibility:hidden;
+    position:absolute;
+    background:#ffffff;
+    border:3px solid #666666;
+    border-radius: 25px;
+    width:500px;
+    height:200px;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-text{
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.popup-title {
+    margin-bottom: 20px;
+}
+
+.active{
+  /*displays pop-up when "active" class is present*/
+    visibility:visible;
+}
+
+
+
+@media screen and (max-width: 719px) {
+  .feature {
+      /* display: block; */
+      /*  Why if I put display: block, margin doesn't work properly?*/
+      /* margin: 30px auto; */
+      margin-left: auto;
+      margin-right: auto;
+
+      /* margin auto without margin horizontal?*/
+      width: 70%;
+  }
+
+  h1  {
+      font-size: 21px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  .buttonStart {
+      background-color: yellow;
+      border: 5px solid orange;
+      border-radius: 60px;
+      width: 120px;
+      margin: 0px auto;
+  }
+}

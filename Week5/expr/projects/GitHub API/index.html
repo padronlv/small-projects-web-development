@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>GitHub API</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <form>
+            <input name="username" type="text" placeholder="your username" autocomplete="off">
+            <input name="password" type="password" placeholder="your password" autocomplete="off">
+            <input name="username-to-search" type="text" placeholder="username to search" autocomplete="off">
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="resultsHeading">
+          <div id="resultsFor"></div>
+      </div>
+
+        <div class="repos">
+        </div>
+
+        <!-- Handlebars templates -->
+
+        <script id="listOfCommits" type="text/x-handlebars-template">
+
+            <div class="commits">
+                <ul>Commits</ul>
+                    {{#each commitsResults}}
+                      <li>{{commit.message}}</li>
+                    {{/each}}
+            </div>
+
+
+        </script>
+
+        <script id="listOfRepos" type="text/x-handlebars-template">
+
+            {{#each reposResults}}
+                <div class="oneRepo">
+                    <img src="{{ owner.avatar_url }}">
+                    <div class="nameOneRepo" id="{{full_name}}">
+                        <p class="full_name">{{ full_name }}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+
+         <!-- Handlebars templates -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
