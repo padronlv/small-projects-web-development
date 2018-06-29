@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+}
+.my-headlines {
+    white-space: nowrap;
+    position: absolute;
+    left: 100%;
+}
+.wrapper {
+    position:relative;
+    border:5px solid red;
+    height: 25px;
+}
+
+.my-headlines a {
+    padding-right: 30px;
+    font-size: 21px;
+    color: black;
+    text-decoration: none;
+
+}
+
+.my-headlines a:hover {
+    color: blue;
+    text-decoration: underline;
+}

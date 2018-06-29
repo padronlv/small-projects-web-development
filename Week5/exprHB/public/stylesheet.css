@@ -1,0 +1,11 @@
+.layout {
+    border: 1px solid red
+}
+
+.view {
+    border:1px solid blue
+}
+
+.partial {
+    border:1px solid green
+}

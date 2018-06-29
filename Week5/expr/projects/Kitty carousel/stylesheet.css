@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#kitties {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.kitty {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    transform: translateX(100%);
+}
+
+.kitty img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.kitty.exit {
+    transform: translateX(-100%) ;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.kitty.onscreen {
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#dots {
+    position: absolute;
+    bottom: 20px;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+
+}
+
+.dot {
+    height:20px;
+    width: 20px;
+    border: 1px white solid;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.dot.highlight {
+    background-color: white;
+}
+
+@media screen and (max-width: 719px) {
+  #kitties {
+      height: 100vh;
+  }
+}

@@ -4,22 +4,26 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const secrets = require ('./secrets.json');
 var basicAuth = require('basic-auth');
+const hb = require("express-handlebars");
+const fs = require("fs");
 
+app.engine("handlebars", hb());
+app.set("view engine", "handlebars");
 
-app.use("/Reichstag", function(req, res, next) {
-    const creds = basicAuth(req);
-    if (!creds ||
-        creds.name != secrets.basicAuthUser ||
-        creds.pass != secrets.basicAuthPass) {
-        res.setHeader(
-            'WWW-Authenticate',
-            'Basic realm="Enter your credentials to see this stuff."');
-        res.sendStatus(401);
-        // res.status(401).send("");
-    } else {
-        next();
-    }
-});
+// app.use("/Reichstag", function(req, res, next) {
+//     const creds = basicAuth(req);
+//     if (!creds ||
+//         creds.name != secrets.basicAuthUser ||
+//         creds.pass != secrets.basicAuthPass) {
+//         res.setHeader(
+//             'WWW-Authenticate',
+//             'Basic realm="Enter your credentials to see this stuff."');
+//         res.sendStatus(401);
+//         // res.status(401).send("");
+//     } else {
+//         next();
+//     }
+// });
 
 app.use("/favicon.ico", function (req, res) {
     return res.sendStatus(204);
@@ -44,6 +48,39 @@ app.use(function(req, res, next){
 });
 
 app.use(express.static(__dirname + '/projects'));
+app.use(express.static(__dirname + '/public'));
+
+let project;
+fs.readdir(__dirname + '/projects', (err, projects) => {
+    if (err) {
+        console.log(err);
+    } else {
+        project = projects;
+        console.log(projects);
+    }
+});
+app.get("/", (req, res) => {
+    return res.render("home", {
+        layout: "main",
+        projectsTemplate: project
+    }); //only for templates
+});
+
+
+app.get('/projects/:projectName', (req, res) => {
+    const descriptionJSON = require(__dirname + '/projects/' + req.params.projectName + "/description.json");
+    console.log(descriptionJSON);
+    return res.render('project', {
+        layout: 'main',
+        name: descriptionJSON.name,
+        description: descriptionJSON.description,
+        url: req.params.projectName,
+        projectsTemplate: project
+    });
+});
+
+
+
 
 app.get("/cookie", function(req, res) {
     return res.send(`
