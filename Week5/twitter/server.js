@@ -1,17 +1,24 @@
 const express = require("express");
 const app = express();
-const getToken = require("./modules").getTocken;
-const getTweets = require("./modules").getTweets;
+const {getToken} = require("./modules");
+
 
 app.use(express.static('./public/ticker jQuery'));
 
 
-app.get("/data.json"), (req, res) => {
-    getToken(function (token) {
-        console.log("TOKEN ", token)
-        getTweets();
-};
+app.get("/data.json", (req, res) => {
+    getToken(function(err, token) {
 
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        getTweets(token, function(err, tweets) {
+            // res.json(filterTweets(tweets));
+        });
+    });
+});
 
 
 
