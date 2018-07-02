@@ -9,6 +9,7 @@ module.exports.getToken = function getToken(callback) {
         method: "POST",
         host: 'api.twitter.com',
         path: '/oauth2/token',
+        json: true,
         headers: {
             'Authorization': "Basic " + new Buffer(consumerKey + ":" + consumerSecret).toString("base64"),
             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
@@ -38,7 +39,7 @@ module.exports.getToken = function getToken(callback) {
             console.log(str);
 
             let bearerToken = JSON.parse(str);
-            bearerToken = bearerToken.access_token
+            bearerToken = bearerToken.access_token;
 
             console.log(bearerToken);
             callback(null, bearerToken);
@@ -63,11 +64,11 @@ module.exports.getToken = function getToken(callback) {
 
 module.exports.getTweets = function getTweets(bearerToken, callback) {
     let options = {
-        method: "POST",
+        method: "GET",
         host: 'api.twitter.com',
-        path: '/1.1/statuses/user_timeline.json?screen_name=el_pais&count=2',
+        path: '/1.1/statuses/user_timeline.json?screen_name=el_pais&count=15?lang=es',
         headers: {
-            "Authorization": "Bearer #{bearer_token}"
+            "Authorization": "Bearer " + bearerToken
         }
     };
 
@@ -89,10 +90,9 @@ module.exports.getTweets = function getTweets(bearerToken, callback) {
 
             // if things go well, this console log should
             // be a json object that has bearer token in it!
-            console.log(str);
 
-            let tweetsObject = str;
-            callback(null, bearerToken);
+            let tweetsObject = JSON.parse(str);
+            callback(null, tweetsObject);
 
         });
     };
@@ -103,11 +103,25 @@ module.exports.getTweets = function getTweets(bearerToken, callback) {
 
     // send HTTPS request
     req.end();
+};
 
 
 
 
-    // https request to get tweets
-    // the documentation you need is at:
-    // https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
+module.exports.filterTweets = function filterTweets(arr) {
+    let newObj = {};
+
+    for(var i = 0; i < arr.length; i++){
+        console.log(arr[i]['entities']['urls']);
+        if (arr[i]['entities']["urls"].length == 1) {
+            var resul = arr[i]["text"].split(" ");
+            console.log(resul);
+            var newResul = resul.filter(function(item){
+                return ! item.startsWith('http');
+            });
+            var toPush = newResul.join(" ");
+            newObj[toPush] = arr[i]['entities']["urls"][0]["url"];
+        }
+    }
+    return newObj;
 };
