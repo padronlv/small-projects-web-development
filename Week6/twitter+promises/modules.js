@@ -16,8 +16,6 @@ module.exports.getToken = function getToken() {
             }
         };
 
-
-
         let cb = function(response) {
             let str = '';
 
@@ -35,7 +33,7 @@ module.exports.getToken = function getToken() {
 
                 // if things go well, this console log should
                 // be a json object that has bearer token in it!
-                console.log(str);
+                // console.log(str);
 
                 let bearerToken = JSON.parse(str);
                 bearerToken = bearerToken.access_token;
@@ -69,12 +67,12 @@ module.exports.getToken = function getToken() {
 
 
 
-module.exports.getTweets = function getTweets(bearerToken) {
+module.exports.getTweets = function getTweets(bearerToken, urlSource) {
     return new Promise ((resolve, reject) => {
         let options = {
             method: "GET",
             host: 'api.twitter.com',
-            path: '/1.1/statuses/user_timeline.json?screen_name=el_pais&count=10?lang=es',
+            path: urlSource,
             headers: {
                 "Authorization": "Bearer " + bearerToken
             }
@@ -124,7 +122,7 @@ module.exports.filterTweets = function filterTweets(arr) {
         console.log(arr[i]['entities']['urls']);
         if (arr[i]['entities']["urls"].length == 1) {
             var resul = arr[i]["text"].split(" ");
-            console.log(resul);
+            // console.log(resul);
             var newResul = resul.filter(function(item){
                 return ! item.startsWith('http');
             });
